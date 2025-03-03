@@ -6,11 +6,18 @@ public class Fraction {
     private long d; // denominator
 
     public Fraction(long n, long d) {
-        this.n = n;
-        this.d = d;
         long gcd = MathUtils.gcd(n, d);
-        // priste - normalizovani zlomku GCD(n,d)
 
+        this.n = n/gcd;
+        this.d = d/gcd;
+
+
+    }
+    public static Fraction parse(String str) {
+        return new Fraction(1,1);
+    }
+    public String toString(){
+        return n + "/" + d;
     }
 
 

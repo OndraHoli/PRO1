@@ -3,7 +3,7 @@ package pro1;
 public class ExamRecord {
     private String name;
     private Fraction score;
-    public ExamRecord() {
+    public ExamRecord(String name, Fraction score) {
         this.name = name;
         this.score = score;
     }
