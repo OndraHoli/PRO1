@@ -1,7 +1,7 @@
 package pro1;
 import java.math.*;
 
-public class Fraction {
+public class Fraction extends Number {
     private long n; // numerator
     private long d; // denominator
 
@@ -41,4 +41,25 @@ public class Fraction {
         return n + "/" + d;
     }
 
+    //????
+
+    @Override
+    public int intValue() {
+        return (int)n / (int)d;
+    }
+
+    @Override
+    public long longValue() {
+        return n/d;
+    }
+
+    @Override
+    public float floatValue() {
+        return n/ (float) d;
+    }
+
+    @Override
+    public double doubleValue() {
+        return (double) n / (double) d;
+    }
 }
